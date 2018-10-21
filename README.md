@@ -61,4 +61,4 @@ for more details about HTTP/2 Server Push on Netlify.
 
 [MIT License](./LICENSE)
 
-Copyright (c)
+Copyright (c) Yoshihide Jimbo
