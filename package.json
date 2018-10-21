@@ -1,6 +1,6 @@
 {
   "name": "nuxt-netlify-http2-server-push",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Nuxt.js module for enabling HTTP/2 server push on Netlify",
   "license": "MIT",
   "contributors": [
