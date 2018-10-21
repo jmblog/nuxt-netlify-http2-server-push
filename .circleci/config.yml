@@ -1,34 +1,36 @@
 version: 2
 jobs:
   build:
-    working_directory: /usr/src/app
+    working_directory: ~/repo
     docker:
-      - image: banian/node
+      - image: circleci/node:10.12
     steps:
       # Checkout repository
       - checkout
 
       # Restore cache
       - restore_cache:
-          key: yarn-{{ checksum "yarn.lock" }}
-
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
       # Install dependencies
       - run:
           name: Install Dependencies
-          command: NODE_ENV=dev yarn
+          command: npm install
 
       # Keep cache
       - save_cache:
-          key: yarn-{{ checksum "yarn.lock" }}
+          key: v1-dependencies-{{ checksum "package.json" }}
           paths:
-            - "node_modules"
+            - 'node_modules'
 
       # Test
       - run:
           name: Tests
-          command: yarn test
+          command: npm test
 
       # Coverage
       - run:
           name: Coverage
-          command: yarn codecov
+          command: npm run coverage
