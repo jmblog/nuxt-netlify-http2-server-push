@@ -33,8 +33,11 @@ $ yarn add nuxt-netlify-http2-server-push
     'nuxt-netlify-http2-server-push',
     {
       // Specify relative path to the dist directory and its content type
-      resources: [{ path: '**/*.js', as: 'script' }, { path: 'images/hero.jpg', as: 'image' }],
-    },
+      resources: [
+        { path: '**/*.js', as: 'script' },
+        { path: 'images/hero.jpg', as: 'image' }
+      ]
+    }
   ];
 }
 ```

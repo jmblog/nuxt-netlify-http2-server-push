@@ -22,7 +22,7 @@ module.exports = {
     "prettier/prettier": [
       "error",
       {
-        singleQuote: false
+        singleQuote: true
       }
     ]
   },
@@ -30,4 +30,4 @@ module.exports = {
     "jest/globals": true,
     jasmine: true
   }
-}
+};
