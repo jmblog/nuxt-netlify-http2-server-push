@@ -13,7 +13,7 @@
 
 ## Features
 
-This module creates a `_headers` file which enables HTTP/2 server push on Netlify.
+This module generates a `_headers` file which enables HTTP/2 server push on Netlify.
 
 ## Setup
 
@@ -25,7 +25,7 @@ $ npm install --save nuxt-netlify-http2-server-push
 $ yarn add nuxt-netlify-http2-server-push
 ```
 
-- Add `nuxt-netlify-http2-server-push` to `modules` section of `nuxt.config.js` and configure the `resources` property
+- Add `nuxt-netlify-http2-server-push` to the `modules` section of `nuxt.config.js` and configure the `resources` property
 
 ```js
 {
@@ -48,7 +48,7 @@ $ yarn add nuxt-netlify-http2-server-push
 
 Just run `nuxt generate` or call `nuxt.generate()`.
 
-This module will generate a `_headers` file in the root of the `dist` directory. If you already have the `_headers` file, the additional lines will be appended to it.
+This module will generate a `_headers` file in the root of the `dist` directory. If you have your own `_headers` file, the additional lines will be appended to it.
 
 Please read https://www.netlify.com/blog/2017/07/18/http/2-server-push-on-netlify/
 for more details about HTTP/2 Server Push on Netlify.
